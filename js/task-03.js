@@ -17,9 +17,9 @@ const images = [
 const galleryItemsEl = document.querySelector(".gallery");
 galleryItemsEl.style.display = "flex";
 
-const galleryItemEl = images.forEach(kay => {
-  const galleryImagEl =`<li><img src=${kay.url} alt = ${kay.alt}></li>`
-  galleryItemsEl.insertAdjacentHTML("afterbegin", galleryImagEl)
+const galleryItemEl = images.map(kay => {
+  return `<li><img src=${kay.url} alt = ${kay.alt}></li>`
+  
 });
 
-console.log(galleryItemsEl);
+galleryItemsEl.insertAdjacentHTML("afterbegin", galleryItemEl)

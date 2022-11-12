@@ -10,8 +10,7 @@ form.addEventListener("submit", (event) => {
     if (email.value === '' || password.value === '') {
         alert("Всі поля мають бути заповнені");
     } else {
-        console.log("Email:", email.value);
-        console.log("Password:", password.value);
+        console.log("Email:", email.value, "Password:", password.value);
     }
     form.reset();
 });

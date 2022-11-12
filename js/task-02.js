@@ -10,11 +10,10 @@ const ingredients = [
 const ingredientsItemsEl = document.getElementById("ingredients");
 
 
-ingredients.forEach( name => {
+const arrayItem = ingredients.map( name => {
   const ingredientsItemEl = document.createElement("li")
-
   ingredientsItemEl.textContent = name
-
-  ingredientsItemsEl.append(ingredientsItemEl)
+  return ingredientsItemEl
 });
 
+ingredientsItemsEl.append(...arrayItem);
